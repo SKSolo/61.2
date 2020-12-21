@@ -1,0 +1,49 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+using namespace std;
+
+class ciagi{
+int dlugosc,liczba;
+    
+bool sprawdz_czy_szescian(int liczba)
+{
+    for (int i=0; i<liczba; i++)
+{
+     int szescian= i* i * i;
+     if (szescian == liczba)
+	 {
+	 	return true;
+	 }
+	 else
+	 {
+	 	return false;
+	 } 
+}
+
+}
+
+void policz()
+{
+	int t[1000];
+    ifstream plik;
+    plik.open("ciagi.txt");
+      while(plik.good())
+	  	{
+        	plik >> dlugosc;
+             for (int i=0; i<dlugosc; i++)
+            	{
+                    plik >> liczba;
+               		t.push_back(liczba);
+                	sprawdz_czy_szescian(liczba);
+                    licz.push_back(liczba);
+                }
+        }
+    plik.close();
+}
+
+int main(int argc, char** argv) {
+	
+	
+	return 0;
+}
